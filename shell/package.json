@@ -1,0 +1,29 @@
+{
+  "name": "shell-new",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@module-federation/nextjs-mf": "^8.8.33",
+    "cross-env": "^7.0.3",
+    "next": "14.2.30",
+    "react": "^18",
+    "react-dom": "^18",
+    "single-spa": "^6.0.3",
+    "single-spa-react": "^6.0.2",
+    "webpack": "^5.100.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.30",
+    "typescript": "^5"
+  }
+}
