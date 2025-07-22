@@ -1,0 +1,46 @@
+/* Responsive styles for navbar */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+  
+  .mobile-only {
+    display: flex !important;
+  }
+  
+  .mobile-center-logo {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .desktop-only {
+    display: flex !important;
+  }
+  
+  .mobile-only {
+    display: none !important;
+  }
+  
+  .mobile-center-logo {
+    display: none !important;
+  }
+}
+
+/* Mobile drawer overlay */
+.mobile-drawer .ant-drawer-content-wrapper {
+  width: 280px !important;
+}
+
+.mobile-drawer .ant-drawer-body {
+  padding: 0;
+}
+
+/* Category items in mobile drawer */
+.category-item:hover {
+  background-color: #f5f5f5;
+}
+
+.category-item:last-child {
+  border-bottom: none;
+}
