@@ -5,15 +5,19 @@ process.env.NEXT_PRIVATE_LOCAL_WEBPACK = 'true';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: false, // Desactivar strict mode para debugging
+  reactStrictMode: false, // Desactivar strict mode para Module Federation
+  swcMinify: true,
+  images: {
+    domains: ['via.placeholder.com', 'localhost'], // Dominios permitidos para imágenes
+    unoptimized: true // Para desarrollo
+  },
   webpack(config) {
     config.plugins.push(
       new NextFederationPlugin({
-        name: 'shell',
+        name: 'carousel',
         filename: 'static/chunks/remoteEntry.js',
-        remotes: {
-          navbar: 'navbar@http://localhost:3001/_next/static/chunks/remoteEntry.js',
-          carousel: 'carousel@http://localhost:3002/_next/static/chunks/remoteEntry.js',
+        exposes: {
+          './Carousel': './components/Carousel.tsx',
         },
         shared: {
           react: { 
@@ -28,11 +32,17 @@ const nextConfig = {
             requiredVersion: false,
             strictVersion: false 
           },
+          antd: {
+            singleton: true,
+            eager: false,
+            requiredVersion: false,
+            strictVersion: false
+          }
         },
       })
     );
     return config;
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

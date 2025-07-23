@@ -7,6 +7,8 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -15,6 +17,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
 }
 
 * {
@@ -26,4 +30,176 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* Eliminar márgenes del carousel para pegarlo a la navbar */
+.ant-carousel {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+.ant-carousel .slick-list {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.ant-carousel .slick-track {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* DOTS DE ANT DESIGN - PELOTITAS SIMPLES */
+.ant-carousel .slick-dots {
+  position: absolute !important;
+  bottom: 5px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 10 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 20px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.ant-carousel .slick-dots li {
+  margin: 0 6px !important;
+  list-style: none !important;
+  display: inline-block !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+/* DOTS INACTIVOS - PELOTITAS NORMALES */
+.ant-carousel .slick-dots li button {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  border: 1px solid #333 !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  font-size: 0 !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* DOTS ACTIVOS - PELOTITAS DE OTRO COLOR (SIN PSEUDO-ELEMENTOS) */
+.ant-carousel .slick-dots li.slick-active button {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  background-color: #333 !important;
+  border: none !important;
+  opacity: 1 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  text-indent: -9999px !important;
+  color: transparent !important;
+}
+
+/* ELIMINACIÓN TOTAL DE PSEUDO-ELEMENTOS */
+.ant-carousel .slick-dots li button::before,
+.ant-carousel .slick-dots li button::after,
+.ant-carousel .slick-dots li.slick-active button::before,
+.ant-carousel .slick-dots li.slick-active button::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  border: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Responsividad para imágenes del carousel */
+.ant-carousel .slick-slide {
+  line-height: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.ant-carousel .slick-slide > div {
+  height: 100%;
+  position: relative;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.ant-carousel .slick-slide img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ajustes específicos para móvil */
+@media (max-width: 768px) {
+  .ant-carousel .slick-slide {
+    height: auto !important;
+    line-height: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  .ant-carousel .slick-slide > div {
+    height: auto !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  .ant-carousel .slick-slide img {
+    object-fit: contain !important;
+    background-color: #f5f5f5;
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* DOTS DE ANT DESIGN EN MÓVIL */
+  .ant-carousel .slick-dots {
+    bottom: 5px !important;
+    height: 16px !important;
+  }
+  
+  .ant-carousel .slick-dots li {
+    margin: 0 4px !important;
+    width: 10px !important;
+    height: 10px !important;
+  }
+  
+  .ant-carousel .slick-dots li button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    border: 1px solid #333 !important;
+  }
+  
+  .ant-carousel .slick-dots li.slick-active button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+    background-color: #333 !important;
+    border: none !important;
+    outline: none !important;
+    text-indent: -9999px !important;
+    color: transparent !important;
+  }
 }

@@ -68,6 +68,7 @@ export const navbarStyles: Record<string, CSSProperties> = {
     textDecoration: 'none',
     transition: 'transform 0.2s ease',
     cursor: 'pointer',
+    height: '100%',
   },
 
   logoImage: {
@@ -86,6 +87,7 @@ export const navbarStyles: Record<string, CSSProperties> = {
     display: 'block',
     height: '60px',
     width: 'auto',
+    maxWidth: '100%',
   },
 
   centerContent: {
@@ -192,6 +194,7 @@ export const navbarStyles: Record<string, CSSProperties> = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    height: '100%',
   },
 
   // Mobile drawer styles

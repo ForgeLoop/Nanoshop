@@ -1,11 +1,18 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import DynamicNavbar from '../components/DynamicNavbar';
+import DynamicCarousel from '../components/DynamicCarousel';
 
 export default function Home() {
   return (
-    <div>
+    <div style={{ margin: 0, padding: 0, width: '100vw', overflow: 'hidden' }}>
       <DynamicNavbar />
-      <main style={{ padding: '2rem' }}>
+      {/* Carousel integrado - sin márgenes ni padding, pegado a navbar */}
+      <div style={{ margin: 0, padding: 0, width: '100%' }}>
+        <DynamicCarousel />
+      </div>
+      
+      <main style={{ margin: 0, padding: '2rem' }}>
         <h1>🎉 Shell Application - NanoShop</h1>
         <p>Esta es la aplicación principal (shell) que consume microfrontends usando <strong>Module Federation + Single-SPA</strong>.</p>
         

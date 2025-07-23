@@ -24,6 +24,7 @@ import { useIsMobile } from './Navbar/useWindowSize';
 import { MobileDrawer } from './Navbar/MobileDrawer';
 import { DesktopDropdown } from './Navbar/DesktopDropdown';
 import { MobileSearchDropdown } from './Navbar/MobileSearchDropdown';
+import { FloatingWhatsApp } from './Navbar/FloatingWhatsApp';
 
 const { Header } = Layout;
 
@@ -107,10 +108,9 @@ const Navbar: React.FC<NavbarProps> = () => {
                   }}
                 >
                   <img
-                    src="/logoSinFondo.png"
+                    src="/logonanoblanco.png"
                     alt="Nanoshop Logo"
-                    height={50}
-                    width={50}
+                    
                     style={navbarStyles.logoImageMobile}
                   />
                 </a>
@@ -332,6 +332,9 @@ const Navbar: React.FC<NavbarProps> = () => {
         visible={drawerVisible} 
         onClose={closeDrawer} 
       />
+
+      {/* ==================== FLOATING WHATSAPP (MOBILE ONLY) ==================== */}
+      {isMobile && <FloatingWhatsApp />}
     </>
   );
 };
