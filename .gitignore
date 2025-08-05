@@ -71,3 +71,8 @@ logs
 # Temporary files
 *.tmp
 *.temp
+
+# Folders that shouldn't exist (Module Federation incompatible)
+nanoshop-new/
+*/src/app/
+src/app/
